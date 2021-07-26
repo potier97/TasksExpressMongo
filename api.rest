@@ -1,0 +1,30 @@
+### OBTENER TODAS LAS TAREAS
+GET http://localhost:3000/api/getTasks
+
+### OBTENER LAS TAREAS POR EL ID
+GET http://localhost:3000/api/getTask/60fde6d00adb4c505cde76e3
+
+### CREAR UNA TAREA
+POST http://localhost:3000/api/newTask
+Content-Type: application/json
+
+{
+    "description": "Borrar la presentación sobre el crud en mongo",
+    "author": "Jose Cifuentes",
+    "done": false,
+    "hide": false
+}
+
+### ACTUALIZAR UNA TAREA
+PUT http://localhost:3000/api/updateTask/60fde478ecfc5155b81aa835
+Content-Type: application/json
+
+{ 
+    "description": "Actualizar la presentación sobre del crud en mongo",
+    "author": "Felipe Cardenas",
+    "done": true,
+    "hide": false
+}
+
+### ELIMINAR UNA TAREA POR EL ID
+DELETE http://localhost:3000/api/deleteTask/60fde6d00adb4c505cde76e3
