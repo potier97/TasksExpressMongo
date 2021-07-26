@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan'); 
+var cors = require('cors');
 var mongoose = require('mongoose');
 const session = require("express-session");
 const mongoDBStore = require("connect-mongodb-session")(session);
@@ -26,6 +27,7 @@ if (process.env.NODE_ENV === "development") {
 
 var app = express();
 
+app.use(cors());
 app.set("secretKey", "fdvdfvdf23421jkds98nwe");
 app.use(
   session({
